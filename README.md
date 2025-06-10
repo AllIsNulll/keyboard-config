@@ -230,11 +230,15 @@ This is what I use when watching YouTube while using **Graphite** layout.
             3. Press any middle row key in order to jump to the corresponding numbered tab
 
 ## External Config
+- *kanata.service* makes it so you don't have to manually launch **Kanata** every system start.
+    * On **Hyprland** add this line to reliably start the service on startup:
+    ```Hyprlang
+    exec-once = systemctl --user start kanata.service
+    ```
 - Whenever the layout is switched a script is run that changes the directional keymaps for my *Hyprland*, *Tmux*, and *Rofi* configs.
     * The idea behind the script is to have a patch file generated beforehand using `git diff` that is then applied by the script.
     * Script file can be found [here](https://github.com/ngosi/.dotfiles/blob/main/scripts/graphite2qwerty.sh).
     * Patch file can be found [here](https://github.com/ngosi/.dotfiles/blob/main/patches/graphite2qwerty.patch).
-- *kanata.service* makes it so you don't have to manually launch **Kanata** every system start. *(Stopped working)*
 - I have a few **Zsh** aliases set up for convenience:
 ```zsh
 # Kanata
